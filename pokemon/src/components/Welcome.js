@@ -7,12 +7,35 @@ const WelcomeContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @keyframes scaleUp {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(5);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 `;
 
 const Welcome = () => {
   setTimeout(() => {
-    document.querySelector("div").style.background = "black";
-  }, 5000);
+    const $div = document.querySelector("div");
+    $div.style.animation = "scaleUp 4s ease-in-out forwards, fadeIn 3s";
+  }, 9500);
+  setTimeout(() => {
+    const $div = document.querySelector("div");
+    $div.style.display = "none";
+  }, 12400);
   return (
     <WelcomeContainer>
       <TypeIt
