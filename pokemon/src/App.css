@@ -4,7 +4,19 @@
   box-sizing: border-box;
 }
 
+body {
+  /* background-color: black; */
+}
+
 #root {
   width: 100vw;
   height: 100vh;
+  background: transparent;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }

@@ -1,7 +1,9 @@
 import TypeIt from "typeit-react";
 import styled from "styled-components";
 
-const WelcomeContainer = styled.div`
+const WelcomeContainer = styled.div.attrs((props) => ({
+  className: props.customClassName || "welcome",
+}))`
   width: 100%;
   height: 100%;
   display: flex;
@@ -29,11 +31,11 @@ const WelcomeContainer = styled.div`
 
 const Welcome = () => {
   setTimeout(() => {
-    const $div = document.querySelector("div");
+    const $div = document.querySelector(".welcome");
     $div.style.animation = "scaleUp 4s ease-in-out forwards, fadeIn 3s";
   }, 9500);
   setTimeout(() => {
-    const $div = document.querySelector("div");
+    const $div = document.querySelector(".welcome");
     $div.style.display = "none";
   }, 12400);
   return (
@@ -41,14 +43,16 @@ const Welcome = () => {
       <TypeIt
         getBeforeInit={(instance) => {
           instance
-            .type("Welcome!")
-            .pause(750)
-            .delete(8)
+            .type("Front-End Dev_Course")
             .pause(500)
-            .type("My name is JeongWuk!")
-            .pause(750)
-            .delete(20)
-            .type("Hope you enjoy~!💛");
+            .empty()
+            .type("4th generation")
+            .pause(500)
+            .empty()
+            .type("👊Fighting👊")
+            .pause(500)
+            .empty()
+            .type("💛Jeong Wuk💛");
 
           return instance;
         }}
