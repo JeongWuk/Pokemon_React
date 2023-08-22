@@ -1,0 +1,11 @@
+Model Information:
+* title:	Legendary Pokemon Reshiram
+* source:	https://sketchfab.com/3d-models/legendary-pokemon-reshiram-d9db1427f6624675b3cc9c2880e7fd21
+* author:	#3D $Resource$ (https://sketchfab.com/lopuh22721)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Legendary Pokemon Reshiram" (https://sketchfab.com/3d-models/legendary-pokemon-reshiram-d9db1427f6624675b3cc9c2880e7fd21) by #3D $Resource$ (https://sketchfab.com/lopuh22721) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

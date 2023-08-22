@@ -14,12 +14,13 @@ function App() {
       setShouldRenderDelayedComponent(true);
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(
-        100,
+        75,
         window.innerWidth / window.innerHeight,
         0.1,
         1000
       );
-      camera.position.z = 100;
+      camera.position.z = 5;
+      camera.position.y = 1.5;
 
       const renderer = new THREE.WebGLRenderer({
         antialias: true,
@@ -29,7 +30,16 @@ function App() {
       document.body.appendChild(renderer.domElement);
 
       const gltfLoader = new GLTFLoader();
-      gltfLoader.load("pokemon/scene.gltf", (gltfScene) => {
+      gltfLoader.load("Reshiram/scene.gltf", (gltfScene) => {
+        const directionalLight1 = new THREE.DirectionalLight(0xffffff, 5);
+        directionalLight1.position.set(1, 1, 1);
+        const directionalLight2 = new THREE.DirectionalLight(0xffffff, 5);
+        directionalLight2.position.set(-1, -1, -1);
+        const pointLight = new THREE.PointLight(0xffffff, 50);
+        pointLight.position.set(0, 0, 0);
+        scene.add(pointLight);
+        scene.add(directionalLight1);
+        scene.add(directionalLight2);
         scene.add(gltfScene.scene);
 
         const animate = () => {

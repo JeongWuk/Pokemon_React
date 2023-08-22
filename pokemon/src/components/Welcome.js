@@ -49,14 +49,14 @@ const Welcome = () => {
             .type("4th generation")
             .pause(500)
             .empty()
-            .type("👊Fighting👊")
+            .type("👊 Fighting 👊")
             .pause(500)
             .empty()
             .type("💛Jeong Wuk💛");
 
           return instance;
         }}
-        style={{ fontSize: "80px", fontWeight: "bold" }}
+        style={{ fontSize: "80px", fontWeight: "bold", color: "white" }}
       />
     </WelcomeContainer>
   );

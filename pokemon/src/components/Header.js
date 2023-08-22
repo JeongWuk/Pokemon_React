@@ -2,17 +2,27 @@ import { styled } from "styled-components";
 
 const Title = styled.div`
   width: 100%;
-  height: 50px;
+  height: 70px;
   text-align: center;
-  font-size: 30px;
+  font-size: 70px;
   color: white;
   font-weight: bold;
+  animation: show 5s;
+
+  @keyframes show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `;
 
 const Header = () => {
   return (
     <>
-      <Title>Header</Title>
+      <Title>Pokemon API</Title>
     </>
   );
 };

@@ -5,7 +5,8 @@
 }
 
 body {
-  /* background-color: black; */
+  background-color: black;
+  overflow: hidden;
 }
 
 #root {
@@ -19,4 +20,13 @@ canvas {
   top: 0;
   left: 0;
   z-index: 10;
+  animation: show 7s ease-in-out forwards;
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
